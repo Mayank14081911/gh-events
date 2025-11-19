@@ -5,6 +5,13 @@ on:
       - opened
       - closed
   workflow_dispatch:
+  push:
+    branches:
+      - master
+      - dev
+      - "dev-*"
+    paths-ignore:
+      - ".github/workflows/*"
 
 jobs:
   deploy:
